@@ -1,0 +1,10 @@
+services:
+  layout-analysis:
+    build:
+      context: ./layout-analysis
+      dockerfile: Dockerfile
+      
+  logo-redaction:
+    build:
+      context: ./logo-redaction
+      dockerfile: Dockerfile
