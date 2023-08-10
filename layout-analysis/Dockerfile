@@ -1,5 +1,15 @@
 FROM python:3.11
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
+# torch has to be installed before installing layoutparser
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 WORKDIR /app
 
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
 COPY . .
+
+EXPOSE 80
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]

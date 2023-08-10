@@ -3,6 +3,8 @@ services:
     build:
       context: ./layout-analysis
       dockerfile: Dockerfile
+  ports:
+   - "8001:80"
       
   logo-redaction:
     build:
