@@ -3,10 +3,12 @@ services:
     build:
       context: ./layout-analysis
       dockerfile: Dockerfile
-  ports:
-   - "8001:80"
+    ports:
+    - "8001:80"
       
   logo-redaction:
     build:
       context: ./logo-redaction
       dockerfile: Dockerfile
+    ports:
+      - "8002:80"
