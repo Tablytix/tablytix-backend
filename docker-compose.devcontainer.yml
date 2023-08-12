@@ -2,17 +2,17 @@ services:
   api-gateway:
     volumes:
       - .:/workspace
-      - output:/workspace/api-gateway/output
+      - results:/workspace/api-gateway/results
     command: /bin/sh -c "while sleep 1000; do :; done"
 
   layout-analysis:
     volumes:
       - .:/workspace
-      - output:/workspace/layout-analysis/output
+      - results:/workspace/layout-analysis/results
     command: /bin/sh -c "while sleep 1000; do :; done"
     
   logo-redaction:
     volumes:
       - .:/workspace
-      - output:/workspace/logo-redaction/output
+      - results:/workspace/logo-redaction/results
     command: /bin/sh -c "while sleep 1000; do :; done"
