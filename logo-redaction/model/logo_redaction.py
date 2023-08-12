@@ -12,10 +12,10 @@ def redact_logo(file):
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 
     result = redact_logo_from_image(image_cv)
-    filename = str(uuid.uuid4())
-    cv2.imwrite(f'uploads/{filename}.png', result)
+    slug = str(uuid.uuid4())
+    cv2.imwrite(f'results/{slug}.png', result)
 
-    return filename
+    return slug
 
 def redact_logo_from_image(image):
     boxes = model.predict(image)

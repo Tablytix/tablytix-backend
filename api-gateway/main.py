@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
 from routers import layout_analysis, logo_redaction
 
@@ -15,3 +16,8 @@ app.include_router(
     prefix="/logo-redaction",
     tags=["Logo Redaction"]
 )
+
+@app.get("/results/{slug}", tags=["Get Results"])
+def get_results(slug):
+    # TODO: Add error handling
+    return FileResponse(f"results/{slug}.png")

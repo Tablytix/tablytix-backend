@@ -9,5 +9,5 @@ app = FastAPI()
 
 @app.post("/")
 async def layout_analysis(file: Annotated[UploadFile, File(description="An image file")]):
-    filename = analyze_layout(file.file)
-    return {"filename": filename}
+    slug = analyze_layout(file.file)
+    return {"slug": slug}

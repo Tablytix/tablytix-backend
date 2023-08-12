@@ -14,10 +14,10 @@ def analyze_layout(file):
     image = Image.open(file)
     layout = model.detect(image)
 
-    filename = str(uuid.uuid4())
+    slug = str(uuid.uuid4())
 
     result = lp.draw_box(image, layout, box_width=3,
                          show_element_id=True, show_element_type=True)
-    result.save(f"uploads/{filename}.png")
+    result.save(f"results/{slug}.png")
 
-    return filename
+    return slug
