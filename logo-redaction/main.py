@@ -8,6 +8,6 @@ app = FastAPI()
 
 
 @app.post("/")
-async def upload(file: Annotated[UploadFile, File(description="An image file")]):
+async def redact_logo(file: Annotated[UploadFile, File(description="An image file")]):
     redact_logo(file.file)
     return {"filename": file.filename}

@@ -10,7 +10,7 @@ model = lp.Detectron2LayoutModel(
 )
 
 
-def layout_analysis(file):
+def analysze_layout(file):
     image = Image.open(file)
     layout = model.detect(image)
 
