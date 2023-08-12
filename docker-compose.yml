@@ -3,6 +3,8 @@ services:
     build:
       context: ./api-gateway
       dockerfile: Dockerfile
+    volumes:
+      - output:/app/output
     ports:
     - "8000:80"
 
@@ -10,6 +12,8 @@ services:
     build:
       context: ./layout-analysis
       dockerfile: Dockerfile
+    volumes:
+      - output:/app/output
     ports:
     - "8001:80"
       
@@ -17,5 +21,10 @@ services:
     build:
       context: ./logo-redaction
       dockerfile: Dockerfile
+    volumes:
+      - output:/app/output
     ports:
       - "8002:80"
+
+volumes:
+  output:
