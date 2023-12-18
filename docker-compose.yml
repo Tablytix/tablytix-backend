@@ -6,7 +6,7 @@ services:
     volumes:
       - results:/app/results
     ports:
-    - "80:80"
+      - "80:80"
 
   layout-analysis:
     build:
@@ -15,8 +15,8 @@ services:
     volumes:
       - results:/app/results
     ports:
-    - "8001:80"
-      
+      - "8001:80"
+
   logo-redaction:
     build:
       context: ./logo-redaction

@@ -10,7 +10,7 @@ services:
       - .:/workspace
       - results:/workspace/layout-analysis/results
     command: /bin/sh -c "while sleep 1000; do :; done"
-    
+
   logo-redaction:
     volumes:
       - .:/workspace

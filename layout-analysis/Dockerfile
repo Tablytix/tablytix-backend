@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 # torch has to be installed before installing layoutparser
 RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip3 install -U layoutparser
+RUN pip3 install 'git+https://github.com/facebookresearch/detectron2.git@v0.4#egg=detectron2'
 
 WORKDIR /app
 

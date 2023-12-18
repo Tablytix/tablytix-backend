@@ -3,6 +3,7 @@ ENV PYTHONUNBUFFERED True
 
 RUN apt-get update \
     && apt-get install -y python3-tk \
+    && apt-get install ffmpeg libsm6 libxext6 -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install torch==1.10.0+cu111 torchvision==0.11.1+cu111 torchtext==0.11.0 -f https://download.pytorch.org/whl/torch_stable.html --upgrade 
