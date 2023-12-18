@@ -16,3 +16,9 @@ services:
       - .:/workspace
       - results:/workspace/logo-redaction/results
     command: /bin/sh -c "while sleep 1000; do :; done"
+
+  table-extraction:
+    volumes:
+      - .:/workspace
+      - results:/workspace/table-extraction/results
+    command: /bin/sh -c "while sleep 1000; do :; done"

@@ -1,0 +1,17 @@
+{
+  "name": "Table Extraction",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "../docker-compose.devcontainer.yml"
+  ],
+  "service": "table-extraction",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+  "workspaceFolder": "/workspace/table-extraction"
+}

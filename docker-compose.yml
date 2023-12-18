@@ -26,5 +26,14 @@ services:
     ports:
       - "8002:80"
 
+  table-extraction:
+    build:
+      context: ./table-extraction
+      dockerfile: Dockerfile
+    volumes:
+      - results:/app/results
+    ports:
+      - "8003:80"
+
 volumes:
   results:
