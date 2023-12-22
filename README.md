@@ -1,5 +1,8 @@
 # Tablytix Backend
 
+> [!WARNING]  
+> The project has been shut down permanently due to its inability to cover the costs.
+
 Backend source for [Tablytix](https://tablytix.vercel.app)
 
 # TODO
